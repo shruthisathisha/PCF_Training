@@ -2,7 +2,8 @@
 applications:
   - name: pal-tracker
     path: build/libs/pal-tracker.jar
-    routes: pal-tracker-shruthi-sathisha.apps.evans.pal.pivotal.io
+    routes:
+     - route: pal-tracker-shruthi-sathisha.apps.evans.pal.pivotal.io
     env:
       WELCOME_MESSAGE: Hello from the review environment
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
