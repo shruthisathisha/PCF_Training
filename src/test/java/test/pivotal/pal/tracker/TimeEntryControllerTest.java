@@ -104,8 +104,8 @@ public class TimeEntryControllerTest {
         ResponseEntity<TimeEntry> response = controller.update(timeEntryId, timeEntryToUpdate);
 
         verify(timeEntryRepository).update(timeEntryId, timeEntryToUpdate);
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(response.getBody()).isEqualTo(expected);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
+        assertThat(response.getBody()).isEqualTo(null);
     }
 
     @Test
